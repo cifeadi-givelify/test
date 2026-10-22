@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  NAMESPACE: operations
+  NAMESPACE: fraud
 
 jobs:
   deployment:

@@ -1,0 +1,70 @@
+# Dotfiles and dotfolders — none needed at runtime
+.*
+
+# CI/CD — build pipeline files, not needed at runtime
+Jenkinsfile
+manifest.yaml
+
+# Docker — not needed inside the image
+Dockerfile*
+docker-compose*
+
+# Documentation
+README.md
+LICENSE
+CHANGELOG.md
+docs
+
+# Editor/OS temp files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+Thumbs.db
+
+# AI assistant configs
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+COPILOT.md
+
+# PHP — dependencies rebuilt via composer install in Dockerfile
+vendor
+node_modules
+phpunit.xml
+phpstan*
+tests
+
+# Laravel framework cache and generated files
+bootstrap/cache/*
+storage/framework/cache/**
+storage/framework/sessions/**
+storage/framework/views/**
+storage/framework/logs/**
+public/build
+public/hot
+public/storage
+storage/*.key
+tmp
+
+# PHP/Node build logs
+npm-debug.log
+yarn-error.log
+
+# Python — dependencies rebuilt via pip install in Dockerfile
+__pycache__
+*.pyc
+*.pyo
+venv
+*.egg-info
+*.egg
+*.so
+build/
+dist/
+htmlcov/
+coverage.xml
+pip-log.txt
+
+# Helm charts if co-located
+charts

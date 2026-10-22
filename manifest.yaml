@@ -1,24 +1,14 @@
 # See documentation on https://givelify15.atlassian.net/wiki/x/LADfc
 ---
-notifications_slack_channel: "#dd"
-import_ansible_secrets: "False"
-execute_smoke_tests: "False"
-# helm_repo_branch: master
+# additional_notifications_slack_channel: "#None"
+# Optional, only use when testing, or need to pin helmchart version
+# helm_repo_branch: main
+# helm_templates_repo_use_branch: "false"
+# helm_templates_repo_tag: v1.0.3
 
 services:
-  - service: test
-    template: laravel-api-app
+  - service: admin-panel
+    template: service-app
     app:
       dockerfile: Dockerfile
-    jobs:
-      qa_jobs:
-        test:
-          schedule: "1 1 1 1 1"
-          command: "p"
-          suspend: false
-      prod_jobs:
-        test:
-          schedule: "1 1 1 1 1"
-          command: "p"
-          suspend: false
 
